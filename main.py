@@ -8,14 +8,14 @@ def hello_flask():
     print("This is home API")
     return render_template("index.html")
 
-@app.route("/predict", methos= ["POST"])
+@app.route("/predict", methods= ["POST"])
 def get_prediction_api():
-    Age = int(request.form.get("Age"))
-    DiabetesPedigreeFunction = int(request.form.get("DiabetesPedigreeFunction"))
-    BMI = int(request.form.get("BMI"))
-    Insulin = int(request.form.get("Insulin"))
-    BloodPressure =int(request.form.get("BloodPressure"))
-    Glucose = int(request.form.get("Glucose"))
+    Age = (request.form.get("Age"))
+    DiabetesPedigreeFunction = (request.form.get("DiabetesPedigreeFunction"))
+    BMI = (request.form.get("BMI"))
+    Insulin = (request.form.get("Insulin"))
+    BloodPressure =(request.form.get("BloodPressure"))
+    Glucose = (request.form.get("Glucose"))
     
     diabetes_obj = DiabetesPrediction(Glucose,BloodPressure,Insulin,BMI,DiabetesPedigreeFunction,Age)
     result = diabetes_obj.get_prediction()
