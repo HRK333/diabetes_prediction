@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {
+          background-image: url('https://images.hindustantimes.com/img/2022/08/20/550x309/pexels-nataliya-vaitkevich-6942077_1660975575679_1660975608647_1660975608647.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diabetes Prediction Console</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Navigation</title>
+        <style>
+            .navbar{
+                background-color: rgb(28, 7, 7);
+                border-radius: 30px;
+                
+            }
+            .navbar ul{
+                overflow: auto;
+            }
+            .navbar li{
+                float:left;
+                list-style: none; 
+                margin: 13px 20px;
+                
+            }
+            .navbar li a{
+                padding: 3px 3px;
+                text-decoration: none;
+                color: white;
+            }
+            .navbar li a:hover{
+                color: red
+            }
+            .search{
+                float: right;
+                color: white;
+                padding: 12px 75px;
+            }
+            .navbar input{
+                border: 2px solid black;
+                border-radius: 14px;
+                padding: 3px 17px;
+                width: 129px;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <div class="search">
+                        <input type="text" name="search" id="search" placeholder="Search this website">
+                    </div>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</head>
+
+<body>
+
+    <h1> Diabetes Prediction </h1>
+    <form method="POST" action="/predict">
+
+        <label>Age:</label>
+        <input type = "text" name = "age">
+        </select>
+
+
+        <br>
+        <br>
+
+        <label>BMI:</label>
+        <input type = "text" name = "bmi">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Diabetes Pedigree Function:</label>
+        <input type = "text" name = "DiabetesPedigreeFunction">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Insulin:</label>
+        <input type = "text" name = "Insulin">
+
+        <br>
+        <br>
+
+        <label>Blood Pressure:</label>
+        <input type = "text" name = "BloodPressure">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Glucose:</label>
+        <input type = "text" name = "Glucose">
+        </select>
+
+        <br>
+        <br>
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        <p>Predicted Diabetes of the patient is <b> {{prediction}} </b>  </p>
+        <a href="https://www.instagram.com/p/Cf0ciBDPDiwAX2g5RdkidwuIaubbTTC70QlwOo0/?igshid=YmMyMTA2M2Y=">Contact us</a>
+        </p>
+
+    </form>
+
+
+</body>
+</html>
